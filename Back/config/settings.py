@@ -29,7 +29,9 @@ ALLOWED_HOSTS = [
         'localhost',
         '.ap-northeast2.compute.amazonaws.com',
         'gasil.ga',
-        '3.36.178.149']
+        '3.36.178.149',
+        '127.0.0.1',
+]
 
 
 
