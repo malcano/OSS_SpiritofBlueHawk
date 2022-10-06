@@ -1,0 +1,9 @@
+ nav {
+     background-color: darkgoldenrod;
+     font-family: 'Noto Sans KR', sans-serif;
+     font-size: xx-large
+ }
+
+ nav a {
+     color: antiquewhite
+ }
