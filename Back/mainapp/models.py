@@ -8,4 +8,5 @@ class Post(models.Model):
     spotY = models.FloatField()
     budget = models.IntegerField()
     # spotX and spotY is for google api spot
-
+    def __str__(self):
+        return f'[{self.pk}]{self.item}'
