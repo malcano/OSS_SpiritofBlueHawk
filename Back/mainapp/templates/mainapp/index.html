@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            TEST
+            Gasil.Ga List Page
         </title>
     </head>
     <body>
         <h1>TEST</h1>
     {% for p in posts %}
-    <h3>{{ p }}</h3>
+        </hr>
+        <h2><a href="{{p.get_absolute_url }}">{{ p }}</a></h2>
     {% endfor %}
     </body>
 </html>
