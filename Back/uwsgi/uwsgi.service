@@ -1,0 +1,15 @@
+[Unit]
+Description=uWSGI service
+
+[Service]
+ExecStart=/home/ubuntu/OSS_SpiritofBlueHawk/Back/venv/bin/uwsgi -i /home/ubuntu/OSS_SpiritofBlueHawk/Back/uwsgi/uwsgi.ini
+; ExecStart=/home/ubuntu/OSS_SpiritofBlueHawk/Back/venv/bin/uwsgi --http :8000 --home /home/ubuntu/OSS_SpiritofBlueHawk/Back/venv --chdir /home/ubuntu/OSS_SpiritofBlueHawk --wsgi-file /home/ubuntu/OSS_SpiritofBlueHawk/Back/config/wsgi.py
+
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target

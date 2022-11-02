@@ -28,8 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
         'localhost',
         '.ap-northeast2.compute.amazonaws.com',
+        '43.201.92.87',
         'gasil.ga',
-        '3.36.178.149',
         '127.0.0.1',
 ]
 
@@ -129,9 +129,18 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ROOT_DIR = os.path.dirname(BASE_DIR)
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, '.static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
