@@ -26,12 +26,8 @@ SECRET_KEY = 'django-insecure-ox+vmf9qeh4-qx+02umd@-cu3%#fert-zk@g3k(679%2tb9xru
 DEBUG = False
 
 ALLOWED_HOSTS = [
-        '.amazonaws.com',
-        '43.201.92.87',
-        'gasil.ga',
-        '127.0.0.1',
-        '*'
-]
+        '*',
+        ]
 
 
 
