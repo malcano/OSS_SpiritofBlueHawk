@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
         '*',
+        '43.201.92.87'
         ]
 
 
