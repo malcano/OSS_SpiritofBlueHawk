@@ -27,7 +27,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
         '*',
-        '43.201.92.87'
+        '43.201.92.87',
+        ".ap-northeast-2.compute.amazonaws.com",
         ]
 
 

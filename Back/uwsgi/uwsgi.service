@@ -3,7 +3,7 @@ Description=EC2 Deploy uWSGI service
 After=syslog.target
 
 [Service]
-ExecStart=/home/ubuntu/OSS_SpiritofBlueHawk/Back/venv/bin/uwsgi -i /home/ubuntu/OSS_SpiritofBlueHawk/.config/uwsgi.ini
+ExecStart=/home/ubuntu/.venv/bin/uwsgi -i /srv/OSS_SpiritofBlueHawk/Back/uwsgi/uwsgi.ini
 
 Restart=always
 KillSignal=SIGQUIT
