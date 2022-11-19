@@ -6,9 +6,10 @@ class Post(models.Model):
     itemIndex = models.IntegerField()
     spotX = models.FloatField()
     spotY = models.FloatField()
-    budget = models.IntegerField()
+    budget = models.PositiveIntegerField()
     # spotX and spotY is for google api spot
     def __str__(self):
         return f'[{self.pk}]{self.item}'
     def get_absolute_url(self):
         return f'/mainapp/{self.pk}/'
+
