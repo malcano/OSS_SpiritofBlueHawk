@@ -84,11 +84,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', #FIX
-        'NAME': 'mysql', #Name of DB
-        'USER': 'root',
+        'NAME': 'SBH_DATABASE', #Name of DB
+        'USER': 'forall',
         'PASSWORD': '1234'
     }
 }
+
 
 
 # Password validation
