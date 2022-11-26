@@ -26,7 +26,6 @@
   <div class="text-end">
       <h5>Share Your Own Trip Plan</h5>
   </div>
-  <a class="btn btn-primary" href="http://gasil.ga:8080/" role="button">메인 페이지</a>
     <table class="table">
         <thead>
           <tr>
@@ -45,7 +44,7 @@
             <td>{{spot_x}}.{{spot_y}}</td>
             <td>\{{budget}}</td>
             <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              일정수정
+              개요
             </button>
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
@@ -83,7 +82,7 @@
 
 <!---data--->
     <!-- request.form으로 사용자에게 data받기 -->
-    <h3>--Add Travel Infomation--</h3>
+    <h3>--Add Travel Information--</h3>
      <form method="POST"> {% csrf_token %}
             {{post_form.as_p}}
             <button type="submit">Save</button>
