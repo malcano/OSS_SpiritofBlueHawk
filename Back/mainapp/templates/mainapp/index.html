@@ -1,28 +1,97 @@
-<!DOCTYPE html>
-<html lang="ko">
-    <head>
+
+<html lang="en">
+
+<head>
         <meta charset="UTF-8">
         <title>
             Gasil.Ga List Page
         </title>
     </head>
-    <body>
+<body>
     <nav>
         <a href="/">Back to Main</a>
         <a href="/aboutus/">About Us</a>
     </nav>
-        <h1>TEST</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="text-center">
+      <h1>GASIL_GA</h1>
+
+  </div>
+  <div class="text-end">
+      <h5>Share Your Own Trip Plan</h5>
+  </div>
+  <a class="btn btn-primary" href="http://gasil.ga:8080/" role="button">메인 페이지</a>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Budget</th>
+            <th scope="col">버튼</th>
+          </tr>
+        </thead>
+        <tbody>
+        <h3>Lastest Trip Plan</h3>
+          <tr>
+            <th scope="row">1</th>
+            <td>{{name}}</td>
+            <td>{{spot_x}}.{{spot_y}}</td>
+            <td>\{{budget}}</td>
+            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              일정수정
+            </button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    이름 {{name}}
+                    주소 {{spot_x}}.{{spot_y}}
+                    예산 \{{budget}}
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">삭제하기</button>
+                  </div>
+                </div>
+              </div>
+            </div></td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+
+    <!--참고 부분-->
+    <h3>--Travel Plan List--</h3>
     {% for p in posts %}
         </hr>
         <h2><a href="{{p.get_absolute_url }}">{{ p }}</a></h2>
     {% endfor %}
+
+<!---data--->
     <!-- request.form으로 사용자에게 data받기 -->
+    <h3>--Add Travel Infomation--</h3>
      <form method="POST"> {% csrf_token %}
             {{post_form.as_p}}
             <button type="submit">Save</button>
      </form>
     <!-- 결과 출력 -->
+
     <h3>The total amount of budget</h3>
         <p>\ {{budget_result}}</p>
     </body>
+<!doctype html>
 </html>
