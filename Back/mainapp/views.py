@@ -13,10 +13,6 @@ def index(request):
     # QuerySet에서 'budget' 키의 밸류를 뽑아서 예산 총합 구하기
     result = 0
     budgetlist = list(Post.objects.values())
-    # name = []
-    # x=[]
-    # y=[]
-    # bud=[]
 
     for bl in budgetlist:
         result += bl['budget']
@@ -24,10 +20,6 @@ def index(request):
         x = bl['spotX']
         y = bl['spotY']
         bud = bl['budget']
-    #  name.append(bl['item'])
-    #  x.append(bl['spotX'])
-    #  y.append(bl['spotY'])
-    #  bud.append(bl['budget'])
 
     # 3자리 마다 콤마 찍기
     result = format(result, ',')
